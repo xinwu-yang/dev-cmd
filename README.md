@@ -8,3 +8,5 @@
 - 备份gitlab
   - gitlab-rake gitlab:backup:create
   - scp /var/opt/gitlab/backups/*$(date +%Y_%m_%d)_13.0.5_gitlab_backup.tar root@25.30.10.224:/root/xinwuy
+- nohup 启动程序
+  - nohup java -jar cube-module-system-0.2.1.jar
