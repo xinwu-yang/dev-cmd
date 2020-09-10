@@ -4,6 +4,8 @@
 - 修改gitlab的host和port
   - vim /opt/gitlab/embedded/service/gitlab-rails/config/gitlab.yml
   - gitlab-ctl restart
+- 创建nginx镜像
+  - docker run -d -p 9001:80 --name cube-demo -v /root/xinwuy/demo/dist:/usr/share/nginx/html -v /root/xinwuy/demo/default.conf:/etc/nginx/conf.d/default.conf --restart=always nginx:stable
 ###### Shell
 - 备份gitlab
   - gitlab-rake gitlab:backup:create
