@@ -12,3 +12,6 @@
   - scp /var/opt/gitlab/backups/*$(date +%Y_%m_%d)_13.0.5_gitlab_backup.tar root@25.30.10.224:/root/xinwuy
 - nohup 启动程序
   - nohup java -jar cube-module-system-0.2.1.jar &
+###### Git
+- 将文件从commit历史流中删除
+  - java -jar bfg-1.13.1.jar --delete-folders db
