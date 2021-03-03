@@ -16,3 +16,18 @@
   - nohup java -jar cube-module-system-0.2.1.jar &
 ###### Git
 - java -jar bfg-1.13.1.jar --delete-folders db #将文件从commit历史流中删除
+
+###### 配置文件
+- docker
+```json
+{
+  "registry-mirrors": [
+    "https://docker.mirrors.ustc.edu.cn/"
+  ],
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size": "100m",
+    "max-file": "3"
+  }
+}
+```
