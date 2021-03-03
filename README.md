@@ -4,6 +4,7 @@
 - docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=chengxun --name mysql --restart always mysql:8 --lower_case_table_names=1 --default_authentication_plugin=mysql_native_password
 - docker run -d -p 6379:6379 --name redis --restart always redis:6 --requirepass redis@123
 - docker run -d -p 9001:80 --name cube-demo -v /root/xinwuy/demo/dist:/usr/share/nginx/html -v /root/xinwuy/demo/default.conf:/etc/nginx/conf.d/default.conf --restart=always nginx:stable
+- docker run --name gogs --restart always -d -p 3000:3000 -v /devops/gogs:/data gogs/gogs:0.12
 ###### Shell
 - 备份gitlab
   - gitlab-rake gitlab:backup:create
