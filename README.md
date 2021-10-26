@@ -5,6 +5,8 @@
 - docker run -d -p 6379:6379 --name redis --restart always redis:6 --requirepass redis@123
 - docker run -d -p 9001:80 --name cube-demo -v /root/xinwuy/demo/dist:/usr/share/nginx/html -v /root/xinwuy/demo/default.conf:/etc/nginx/conf.d/default.conf --restart=always nginx:stable
 - docker run --name gogs --restart always -d -p 3000:3000 -v /devops/gogs:/data gogs/gogs:0.12
+- docker pull registry.cn-chengdu.aliyuncs.com/yousinnmu/nginx-spa:stable
+- docker pull registry.cn-chengdu.aliyuncs.com/yousinnmu/serverjre:env
 ###### Shell
 - 备份gitlab
   - gitlab-rake gitlab:backup:create
