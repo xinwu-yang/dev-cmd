@@ -8,6 +8,7 @@
 - docker run -d -p 9000:9000 -p 9001:9001 --name minio --restart always -v ~/minio/data:/data -e "MINIO_ROOT_USER=admin" -e "MINIO_ROOT_PASSWORD=chengxun" minio/minio server /data --console-address ":9001"
 - docker pull registry.cn-chengdu.aliyuncs.com/yousinnmu/nginx-spa:stable
 - docker pull registry.cn-chengdu.aliyuncs.com/yousinnmu/serverjre:env
+- docker run -d -p 8081:8081 --name nexus --restart always -v /root/nexus/nexus-data:/nexus-data sonatype/nexus3:3.37.3
 ###### Shell
 - 备份gitlab
   - gitlab-rake gitlab:backup:create
