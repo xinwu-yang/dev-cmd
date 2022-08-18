@@ -3,16 +3,22 @@
 ### Docker
 
 ```shell
+# 创建 mysql5.7.x
 docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=chengxun --name mysql --restart always mysql:5.7 --lower_case_table_names=1 --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci --explicit_defaults_for_timestamp=true --max_allowed_packet=128M
 
+# 创建 mysql8
 docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=chengxun --name mysql --restart always mysql:8 --lower_case_table_names=1 --default_authentication_plugin=mysql_native_password
 
+# 创建 redis
 docker run -d -p 6379:6379 --name redis --restart always redis:6 --requirepass redis@123
 
+# 创建 nginx
 docker run -d -p 9001:80 --name cube-demo -v /root/xinwuy/demo/dist:/usr/share/nginx/html -v /root/xinwuy/demo/default.conf:/etc/nginx/conf.d/default.conf --restart=always nginx:stable
 
+# 创建 minio
 docker run -d -p 9000:9000 -p 9001:9001 --name minio --restart always -v ~/minio/data:/data -e "MINIO_ROOT_USER=admin" -e "MINIO_ROOT_PASSWORD=chengxun" minio/minio server /data --console-address ":9001"
 
+# 创建 nexus
 docker run -d -p 8081:8081 --name nexus --restart always -v /root/nexus/nexus-data:/nexus-data sonatype/nexus3:3.37.3
 ```
 
