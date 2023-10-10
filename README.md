@@ -44,7 +44,7 @@ nohup java -jar cube-module-system-0.2.1.jar &
 # x.x.x.x/32 = x.x.x.x 255.255.255.255
 # x.x.x.x/24 = x.x.x.x 255.255.255.0
 # x.x.x.x/23 = x.x.x.x 255.255.254.0
-nmcli con mod enp0s3 ipv4.method manual ipv4.addresses 192.168.151.161/23 ipv4.gateway 192.168.150.1
+nmcli con mod enp0s3 ipv4.method manual ipv4.addresses 192.168.151.161/23 ipv4.gateway 192.168.150.1 ipv4.dns 8.8.8.8
 ```
 
 ### Git
